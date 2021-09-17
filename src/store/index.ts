@@ -6,6 +6,17 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     selectedItem: {},
+    character: {
+      specPoint: 6,
+      specifications: {
+        power: 1,
+        agility: 1,
+        intuition: 1,
+        intellect: 1,
+      },
+      perkPoint: 1,
+      perks: {},
+    },
     equipment: {
       weapon: {
         type: 'weapon',

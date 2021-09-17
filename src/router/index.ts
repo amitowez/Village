@@ -7,7 +7,7 @@ import Inventory from '../pages/Inventory.vue';
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
-  { path: '/', redirect: '/action' },
+  { path: '/', redirect: '/character' },
   {
     path: '/action',
     name: 'action',
