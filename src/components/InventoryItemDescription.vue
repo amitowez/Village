@@ -78,7 +78,9 @@ export default {
         equipped: true,
         id: this.selectedItem.id,
       };
-
+      const { value } = this.selectedItem;
+      const { type } = this.selectedItem;
+      this.$store.commit('changeCharStat', { value, type });
       this.$store.commit('changeEquip', newEquip);
     },
     takeOffClothe() {
@@ -87,6 +89,9 @@ export default {
         equipped: false,
         id: null,
       };
+      const value = -this.selectedItem.value;
+      const { type } = this.selectedItem;
+      this.$store.commit('changeCharStat', { value, type });
       this.$store.commit('changeEquip', newEquip);
     },
   },
@@ -94,8 +99,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .item-description {
-  min-width: 350px;
+  width: 350px;
   height: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
 }
 .title {
   padding: 5px;
