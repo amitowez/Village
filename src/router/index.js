@@ -1,13 +1,13 @@
 import Vue from 'vue';
-import VueRouter, { RouteConfig } from 'vue-router';
+import VueRouter from 'vue-router';
 import ActionMap from '../pages/ActionMap.vue';
-import Character from '../pages/Сharacter.vue';
-import Inventory from '../pages/Inventory.vue';
 import Battle from '../pages/Battle.vue';
+import Inventory from '../pages/Inventory.vue';
+import Character from '../pages/Сharacter.vue';
 
 Vue.use(VueRouter);
 
-const routes: Array<RouteConfig> = [
+const routes = [
   { path: '/', redirect: '/battle' },
   {
     path: '/action',

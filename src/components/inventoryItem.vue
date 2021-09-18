@@ -3,12 +3,16 @@
     <v-img height="100" width="100" :src="src" />
   </v-btn>
 </template>
-<script lang="ts">
-import { PropType } from 'vue';
-/* eslint-disable global-require */
-import { InventoryItem } from '@/data/allInventory';
+<script>
+import Vue from 'vue';
 
-export default {
+export default Vue.extend({
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
   computed: {
     src() {
       // FIXME: WTF with types?
@@ -25,17 +29,11 @@ export default {
     },
   },
   methods: {
-    selectedItem(newitem: unknown) {
+    selectedItem(newitem) {
       this.$store.commit('changeSelectedItem', newitem);
     },
   },
-  props: {
-    item: {
-      type: Object as PropType<InventoryItem>,
-      required: true,
-    },
-  },
-};
+});
 </script>
 <style lang="scss" scoped>
 .item {

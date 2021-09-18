@@ -3,13 +3,13 @@
     <v-app-bar color="accent-4" dark>
       <v-spacer />
       <!-- <v-btn outlined class="ml-3"><router-link class="nav" to="/action">Карта</router-link></v-btn> -->
-      <v-btn outlined v-show="checkReadyChar" class="ml-3"
+      <v-btn v-show="checkReadyChar" outlined class="ml-3"
         ><router-link class="nav" to="/character">Персонаж </router-link></v-btn
       >
-      <v-btn outlined v-show="checkReadyInv" class="ml-3"
+      <v-btn v-show="checkReadyInv" outlined class="ml-3"
         ><router-link class="nav" to="/inventory">Инвентарь </router-link></v-btn
       >
-      <v-btn outlined v-show="battleShow" class="ml-3"
+      <v-btn v-show="battleShow" outlined class="ml-3"
         ><router-link class="nav" to="/battle">Бой </router-link></v-btn
       >
     </v-app-bar>

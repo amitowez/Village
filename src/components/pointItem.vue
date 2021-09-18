@@ -3,19 +3,29 @@
     <p>{{ item.dis }}</p>
     <v-btn
       style="height: 30px; min-width: 30px; padding: 0px"
-      @click="valueMinus"
       class="btn-change"
+      @click="valueMinus"
       >-</v-btn
     >
     <p>{{ itemValue }}</p>
-    <v-btn style="height: 30px; min-width: 30px; padding: 0px" @click="valuePlus" class="btn-change"
+    <v-btn style="height: 30px; min-width: 30px; padding: 0px" class="btn-change" @click="valuePlus"
       >+</v-btn
     >
   </div>
 </template>
 <script>
 export default {
-  props: ['item'],
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
+  computed: {
+    itemValue() {
+      return this.item.value;
+    },
+  },
   methods: {
     valuePlus() {
       const newValue = this.item.value + 1;
@@ -47,11 +57,6 @@ export default {
           additionally,
         });
       }
-    },
-  },
-  computed: {
-    itemValue() {
-      return this.item.value;
     },
   },
 };
