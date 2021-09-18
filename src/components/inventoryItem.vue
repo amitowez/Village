@@ -4,11 +4,11 @@
   </v-btn>
 </template>
 <script lang="ts">
-import { PropType } from 'vue';
+import Vue, { PropType } from 'vue';
 /* eslint-disable global-require */
 import { InventoryItem } from '@/data/allInventory';
 
-export default {
+export default Vue.extend({
   computed: {
     src() {
       // FIXME: WTF with types?
@@ -35,7 +35,7 @@ export default {
       required: true,
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 .item {
