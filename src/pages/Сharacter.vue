@@ -6,7 +6,7 @@
     <CharacterStats />
   </div>
 </template>
-<script lang="ts">
+<script>
 import CharacterPoint from '@/components/characterPoint.vue';
 import CharacterPerks from '@/components/characterPerks.vue';
 import CharacterStats from '@/components/characterStats.vue';

@@ -14,17 +14,16 @@
     <v-btn v-show="isBtnOffShow" @click="takeOffClothe"> Снять </v-btn>
   </div>
 </template>
-<script lang="ts">
-import Vue from 'vue';
+<script>
 import { mapState } from 'vuex';
 
-export default Vue.extend({
+export default {
   data() {
     return {};
   },
   computed: {
     ...mapState(['selectedItem']),
-    itemTitle(): string {
+    itemTitle() {
       return this.selectedItem.title;
     },
     itemSrc() {
@@ -32,14 +31,14 @@ export default Vue.extend({
       // eslint-disable-next-line import/no-dynamic-require
       return `${require(`@/images/${img}`)}`;
     },
-    itemPrice(): string {
+    itemPrice() {
       const { price } = this.selectedItem;
       if (!price) {
         return '';
       }
       return `Цена: ${price}`;
     },
-    itemValue(): string {
+    itemValue() {
       const { type, value } = this.selectedItem;
       if (!type) {
         return '';
@@ -51,9 +50,7 @@ export default Vue.extend({
     },
     isBtnOnShow() {
       const { type } = this.selectedItem;
-      const equip = Object.values<any>(this.$store.state.equipment).find(
-        (value) => value.type === type
-      );
+      const equip = Object.values(this.$store.state.equipment).find((value) => value.type === type);
 
       if (equip) {
         return !equip.equipped;
@@ -62,9 +59,7 @@ export default Vue.extend({
     },
     isBtnOffShow() {
       const { type } = this.selectedItem;
-      const equip = Object.values<any>(this.$store.state.equipment).find(
-        (value) => value.type === type
-      );
+      const equip = Object.values(this.$store.state.equipment).find((value) => value.type === type);
 
       if (equip) {
         return equip.equipped;
@@ -96,7 +91,7 @@ export default Vue.extend({
       this.$store.commit('changeEquip', newEquip);
     },
   },
-});
+};
 </script>
 <style lang="scss" scoped>
 .item-description {

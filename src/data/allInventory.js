@@ -1,15 +1,4 @@
-export type InventoryItem = {
-  id: number;
-  itemId: number;
-  title: string;
-  price: number;
-  img: string;
-  type: string;
-  value: number;
-  equipped: boolean;
-};
-
-const items: InventoryItem[] = [
+const items = [
   {
     id: 1,
     itemId: 1,

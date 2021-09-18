@@ -3,13 +3,14 @@
     <h2 style="padding-left: 30px">Характеристики</h2>
     <p class="free-point">Свободные характеристики: {{ freePoint }}</p>
     <PointItem v-for="item in items" :key="items[item]" :item="item" />
-    <v-btn @click="readyChar" style="margin-top: 50px; margin-left: 150px">Готов к бою</v-btn>
+    <v-btn style="margin-top: 50px; margin-left: 150px" @click="readyChar">Готов к бою</v-btn>
   </div>
 </template>
 <script>
 import PointItem from './pointItem.vue';
 
 export default {
+  components: { PointItem },
   data() {
     return {
       items: this.$store.state.character.specifications,
@@ -31,7 +32,6 @@ export default {
       }
     },
   },
-  components: { PointItem },
 };
 </script>
 <style scoped>
