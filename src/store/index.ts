@@ -1,9 +1,21 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { InventoryItem } from '@/data/allInventory';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+type TEquipmentType = 'weapon' | 'helmet' | 'armor' | 'hand' | 'shoes' | 'legs' | 'shield';
+type TEquipmentItem = {
+  type: TEquipmentType;
+  equipped: boolean;
+  id: number | null;
+};
+export type State = {
+  selectedItem: InventoryItem | Record<string, never>;
+  equipment: Record<TEquipmentType, TEquipmentItem>;
+};
+
+export default new Vuex.Store<State>({
   state: {
     readyToBatlle: {
       inventory: false,

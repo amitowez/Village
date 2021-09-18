@@ -10,7 +10,9 @@
     "plugin:prettier-vue/recommended",
     "@vue/typescript/recommended"
   ],
+  "plugins": ["vue", "@typescript-eslint"],
   "parserOptions": {
+    "extraFileExtensions": [".vue"],
     "parser": "@typescript-eslint/parser",
     "sourceType": "module",
     "ecmaVersion": 2020

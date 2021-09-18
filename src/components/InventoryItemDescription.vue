@@ -15,9 +15,10 @@
   </div>
 </template>
 <script lang="ts">
+import Vue from 'vue';
 import { mapState } from 'vuex';
 
-export default {
+export default Vue.extend({
   data() {
     return {};
   },
@@ -95,7 +96,7 @@ export default {
       this.$store.commit('changeEquip', newEquip);
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 .item-description {
