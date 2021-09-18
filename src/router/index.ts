@@ -3,11 +3,12 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import ActionMap from '../pages/ActionMap.vue';
 import Character from '../pages/Сharacter.vue';
 import Inventory from '../pages/Inventory.vue';
+import Battle from '../pages/Battle.vue';
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
-  { path: '/', redirect: '/character' },
+  { path: '/', redirect: '/battle' },
   {
     path: '/action',
     name: 'action',
@@ -22,6 +23,11 @@ const routes: Array<RouteConfig> = [
     path: '/inventory',
     name: 'inventory',
     component: Inventory,
+  },
+  {
+    path: '/battle',
+    name: 'battle',
+    component: Battle,
   },
 ];
 

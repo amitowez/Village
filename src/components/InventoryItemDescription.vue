@@ -99,10 +99,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .item-description {
-  width: 350px;
+  width: 270px;
   height: 400px;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);

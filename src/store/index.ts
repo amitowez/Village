@@ -5,6 +5,10 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    readyToBatlle: {
+      inventory: false,
+      character: false,
+    },
     selectedItem: {},
     character: {
       statistics: {
@@ -83,6 +87,9 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    changeReady(state, key) {
+      Vue.set(state.readyToBatlle, key, true);
+    },
     changeSelectedItem(state, newSelected) {
       Vue.set(state, 'selectedItem', newSelected);
     },
