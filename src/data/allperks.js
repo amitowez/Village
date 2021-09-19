@@ -1,0 +1,51 @@
+export default [
+  {
+    perkId: 1,
+    name: 'Удар',
+    value: 0,
+    chanceToHit: 60,
+    staminaPrice: 1,
+  },
+  {
+    perkId: 2,
+    name: 'Мощный удар',
+    value: 10,
+    chanceToHit: 55,
+    staminaPrice: 10,
+  },
+  {
+    perkId: 3,
+    name: 'Прицельный удар',
+    value: -5,
+    chanceToHit: 80,
+    staminaPrice: 10,
+  },
+  {
+    perkId: 4,
+    name: 'Точный удар',
+    value: 0,
+    chanceToHit: 95,
+    staminaPrice: 20,
+  },
+  {
+    perkId: 5,
+    name: 'Мастерский точный удар',
+    value: 10,
+    chanceToHit: 100,
+    staminaPrice: 35,
+  },
+  {
+    perkId: 6,
+    name: 'Разрубающий удар',
+    value: 20,
+    chanceToHit: 75,
+    staminaPrice: 35,
+  },
+  {
+    perkId: 7,
+    name: 'Смертельный удар',
+    value: 35,
+    chanceToHit: 75,
+    staminaPrice: 50,
+  },
+];
