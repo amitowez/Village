@@ -15,9 +15,7 @@ export default Vue.extend({
   },
   computed: {
     src() {
-      // FIXME: WTF with types?
       const { img } = this.item ?? '';
-      // eslint-disable-next-line import/no-dynamic-require
       return `${require(`@/images/${img}`)}`;
     },
     itemClass() {

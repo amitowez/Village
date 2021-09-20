@@ -2,69 +2,30 @@
   <div class="item-description">
     <img height="250" width="250" :src="itemSrc" />
     <div class="title">
-      {{ itemTitle }}
+      {{ selectedItem.title }}
     </div>
     <div class="title">
-      {{ itemValue }}
+      {{ selectedItemTextParams.type }}
     </div>
     <div class="title">
-      {{ itemPrice }}
+      {{ selectedItemTextParams.price }}
     </div>
-    <v-btn v-show="isBtnOnShow" @click="takeOnClothe"> Одеть </v-btn>
-    <v-btn v-show="isBtnOffShow" @click="takeOffClothe"> Снять </v-btn>
+    <div v-if="selectedItem.type">
+      <v-btn v-show="!isSelectedItemEquiped" @click="takeOnClothe"> Одеть </v-btn>
+      <v-btn v-show="isSelectedItemEquiped" @click="takeOffClothe"> Снять </v-btn>
+    </div>
   </div>
 </template>
 <script>
-import { mapState } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 
 export default {
-  data() {
-    return {};
-  },
   computed: {
     ...mapState(['selectedItem']),
-    itemTitle() {
-      return this.selectedItem.title;
-    },
+    ...mapGetters(['selectedItemTextParams', 'isSelectedItemEquiped']),
     itemSrc() {
       const img = this.selectedItem.img ?? 'фон.jpg';
-      // eslint-disable-next-line import/no-dynamic-require
       return `${require(`@/images/${img}`)}`;
-    },
-    itemPrice() {
-      const { price } = this.selectedItem;
-      if (!price) {
-        return '';
-      }
-      return `Цена: ${price}`;
-    },
-    itemValue() {
-      const { type, value } = this.selectedItem;
-      if (!type) {
-        return '';
-      }
-      if (type === 'weapon') {
-        return `Урон: ${value}`;
-      }
-      return `Броня: ${value}`;
-    },
-    isBtnOnShow() {
-      const { type } = this.selectedItem;
-      const equip = Object.values(this.$store.state.equipment).find((value) => value.type === type);
-
-      if (equip) {
-        return !equip.equipped;
-      }
-      return '';
-    },
-    isBtnOffShow() {
-      const { type } = this.selectedItem;
-      const equip = Object.values(this.$store.state.equipment).find((value) => value.type === type);
-
-      if (equip) {
-        return equip.equipped;
-      }
-      return '';
     },
   },
   methods: {
@@ -74,8 +35,7 @@ export default {
         equipped: true,
         id: this.selectedItem.id,
       };
-      const { value } = this.selectedItem;
-      const { type } = this.selectedItem;
+      const { value, type } = this.selectedItem;
       this.$store.commit('changeCharStat', { value, type });
       this.$store.commit('changeEquip', newEquip);
     },

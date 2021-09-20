@@ -20,5 +20,4 @@ export default [
     chanceToHit: 95,
     staminaPrice: 10,
   },
-
 ];

@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { getSelectedItemTextParams } from '@/utils';
 
 Vue.use(Vuex);
 
@@ -142,4 +143,9 @@ export default new Vuex.Store({
   },
   actions: {},
   modules: {},
+  getters: {
+    isSelectedItemEquiped: ({ selectedItem, equipment }) =>
+      Object.values(equipment).find((value) => value.type === selectedItem.type)?.equipped,
+    selectedItemTextParams: ({ selectedItem }) => getSelectedItemTextParams(selectedItem),
+  },
 });

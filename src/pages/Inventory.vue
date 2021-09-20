@@ -24,7 +24,6 @@ export default {
   methods: {
     readyInv() {
       this.$store.commit('changeReady', 'inventory');
-      console.log(this.$store.state.readyToBatlle);
       if (!this.$store.state.readyToBatlle.character) {
         this.$router.push('character');
       } else {
