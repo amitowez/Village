@@ -6,16 +6,16 @@
     <CharacterStats />
   </div>
 </template>
-<script lang="ts">
-import characterPoint from '@/components/characterPoint.vue';
-import characterPerks from '@/components/characterPerks.vue';
-import characterStats from '@/components/characterStats.vue';
+<script>
+import CharacterPoint from '@/components/characterPoint.vue';
+import CharacterPerks from '@/components/characterPerks.vue';
+import CharacterStats from '@/components/characterStats.vue';
 
 export default {
   components: {
-    characterPoint,
-    characterPerks,
-    characterStats,
+    CharacterPoint,
+    CharacterPerks,
+    CharacterStats,
   },
 };
 </script>
@@ -24,8 +24,12 @@ export default {
   display: flex;
 }
 .character-block {
-  min-width: 400px;
+  min-width: 450px;
   min-height: 500px;
-  border: 1px solid black;
+  margin: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 33px 12px rgba(34, 60, 80, 0.2);
 }
 </style>

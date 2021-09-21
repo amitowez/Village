@@ -1,13 +1,14 @@
 import Vue from 'vue';
-import VueRouter, { RouteConfig } from 'vue-router';
+import VueRouter from 'vue-router';
 import ActionMap from '../pages/ActionMap.vue';
-import Character from '../pages/Сharacter.vue';
+import Battle from '../pages/Battle.vue';
 import Inventory from '../pages/Inventory.vue';
+import Character from '../pages/Сharacter.vue';
 
 Vue.use(VueRouter);
 
-const routes: Array<RouteConfig> = [
-  { path: '/', redirect: '/character' },
+const routes = [
+  { path: '/', redirect: '/battle' },
   {
     path: '/action',
     name: 'action',
@@ -22,6 +23,11 @@ const routes: Array<RouteConfig> = [
     path: '/inventory',
     name: 'inventory',
     component: Inventory,
+  },
+  {
+    path: '/battle',
+    name: 'battle',
+    component: Battle,
   },
 ];
 
