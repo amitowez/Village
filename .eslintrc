@@ -12,6 +12,7 @@
     "parser": "babel-eslint"
   },
   "rules": {
-    "global-require": "off"
+    "global-require": "off",
+    "import/no-dynamic-require": "off"
   }
 }
