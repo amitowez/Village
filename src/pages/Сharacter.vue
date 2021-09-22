@@ -7,9 +7,9 @@
   </div>
 </template>
 <script>
-import CharacterPoint from '@/components/characterPoint.vue';
-import CharacterPerks from '@/components/characterPerks.vue';
-import CharacterStats from '@/components/characterStats.vue';
+import CharacterPoint from '@/components/character/characterPoint.vue';
+import CharacterPerks from '@/components/character/characterPerks.vue';
+import CharacterStats from '@/components/character/characterStats.vue';
 
 export default {
   components: {

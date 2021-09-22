@@ -6,7 +6,7 @@
 </template>
 <script>
 import Perk from './Perk.vue';
-import perks from '../data/playerPerk';
+import perks from '../../data/playerPerk';
 
 export default {
   components: { Perk },

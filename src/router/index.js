@@ -8,7 +8,7 @@ import Character from '../pages/Сharacter.vue';
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', redirect: '/character' },
+  { path: '/', redirect: '/battle' },
   {
     path: '/action',
     name: 'action',

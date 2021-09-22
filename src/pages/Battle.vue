@@ -7,8 +7,8 @@
   </div>
 </template>
 <script>
-import Player from '@/components/battlePlayer.vue';
-import Opponent from '@/components/battleOpponent.vue';
+import Player from '@/components/BattlePlayer.vue';
+import Opponent from '@/components/BattleOpponent.vue';
 
 export default {
   components: {
