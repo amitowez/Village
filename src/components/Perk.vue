@@ -49,21 +49,33 @@ export default {
 </script>
 <style scoped>
 .perk {
-  height: 20px;
-  width: 150px;
+  height: 40px;
+  padding: 6px;
+  margin: 10px;
+  width: 300px;
   border: 1px solid black;
   border-radius: 10px;
   cursor: pointer;
   display: block;
   justify-content: center;
+  font-size: 20px;
+  -webkit-box-shadow: 0px 0px 20px -4px rgba(34, 60, 80, 0.27);
+  -moz-box-shadow: 0px 0px 20px -4px rgba(34, 60, 80, 0.27);
+  box-shadow: 0px 0px 20px -4px rgba(34, 60, 80, 0.27);
 }
 .perkActive {
-  height: 75px;
-  width: 200px;
+  height: 100px;
+  padding: 6px;
+  margin: 10px;
+  width: 300px;
   border: 1px solid black;
   border-radius: 10px;
   cursor: pointer;
   display: block;
   justify-content: center;
+  font-size: 20px;
+  -webkit-box-shadow: 0px 0px 20px -4px rgba(34, 60, 80, 0.27);
+  -moz-box-shadow: 0px 0px 20px -4px rgba(34, 60, 80, 0.27);
+  box-shadow: 0px 0px 20px -4px rgba(34, 60, 80, 0.27);
 }
 </style>

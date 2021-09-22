@@ -17,7 +17,7 @@ export default new Vuex.Store({
         healPoint: 50,
         stamina: 20,
         evasion: 5,
-        chanceHit: 55,
+        chanceHit: 0,
         criticalHitDamage: 2,
         criticalHitChance: 5,
         trainability: 0,
@@ -118,13 +118,13 @@ export default new Vuex.Store({
       }
       if (key === 'agility') {
         const newEvasion = state.character.statistics.evasion + additionally;
-        const newChanceHit = state.character.statistics.chanceHit + base;
+        const newChanceHit = state.character.statistics.chanceHit + additionally;
         Vue.set(state.character.statistics, 'evasion', newEvasion);
         Vue.set(state.character.statistics, 'chanceHit', newChanceHit);
       }
       if (key === 'intuition') {
         const newCriticalHitChance = state.character.statistics.criticalHitChance + additionally;
-        const newChanceHit = state.character.statistics.chanceHit + base;
+        const newChanceHit = state.character.statistics.chanceHit + additionally;
         Vue.set(state.character.statistics, 'criticalHitChance', newCriticalHitChance);
         Vue.set(state.character.statistics, 'chanceHit', newChanceHit);
       }
