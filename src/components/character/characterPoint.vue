@@ -1,13 +1,13 @@
 <template>
   <div class="character-block">
-    <h2 style="padding-left: 30px">Характеристики</h2>
+    <h2>Характеристики</h2>
     <p class="free-point">Свободные характеристики: {{ freePoint }}</p>
     <PointItem v-for="item in items" :key="items[item]" :item="item" />
-    <v-btn style="margin-top: 50px; margin-left: 150px" @click="readyChar">Готов к бою</v-btn>
+    <v-btn style="margin-top: 50px" @click="readyChar">Готов к бою</v-btn>
   </div>
 </template>
 <script>
-import PointItem from './pointItem.vue';
+import PointItem from './PointItem.vue';
 
 export default {
   components: { PointItem },
@@ -38,6 +38,11 @@ export default {
 .free-point {
   margin: 30px;
   font-size: 20px;
+}
+.character-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
 

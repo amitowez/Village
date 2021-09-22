@@ -2,7 +2,7 @@ const items = [
   {
     id: 1,
     itemId: 1,
-    title: 'Железный меч',
+    title: 'Меч',
     price: 50,
     img: 'меч.png',
     type: 'weapon',
@@ -11,12 +11,12 @@ const items = [
   },
   {
     id: 2,
-    itemId: 1,
-    title: 'Меч',
+    itemId: 33,
+    title: 'Молот',
     price: 50,
-    img: 'меч.png',
+    img: 'молот.png',
     type: 'weapon',
-    value: 10,
+    value: 12,
     equipped: false,
   },
   {

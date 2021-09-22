@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import InventoryItem from './inventoryItem.vue';
+import InventoryItem from './InventoryItem.vue';
 
 export default {
   components: { InventoryItem },

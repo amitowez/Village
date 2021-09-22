@@ -10,8 +10,8 @@
 </template>
 <script>
 import allInventory from '@/data/allInventory';
-import InventoryList from '@/components/InventoryList.vue';
-import InventoryItemDescription from '@/components/InventoryItemDescription.vue';
+import InventoryList from '@/components/inventory/InventoryList.vue';
+import InventoryItemDescription from '@/components/inventory/InventoryItemDescription.vue';
 
 export default {
   components: { InventoryList, InventoryItemDescription },
