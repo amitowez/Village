@@ -1,6 +1,6 @@
 <template>
   <div class="character-block">
-    <h2 style="padding-left: 30px">Статистика</h2>
+    <h2 style="padding-left: 155px">Статистика</h2>
     <div class="stat-dis">
       <p>Урон</p>
       <p style="padding-left: 30px">{{ renderDamage }}</p>
@@ -63,7 +63,7 @@ export default {
       return `${this.stat.evasion.toFixed(1)}%`;
     },
     renderChanceHit() {
-      return `${this.stat.chanceHit.toFixed(1)}%`;
+      return `+${this.stat.chanceHit.toFixed(1)}%`;
     },
     renderCriticalHitDamage() {
       return `x${this.stat.criticalHitDamage.toFixed(1)}`;

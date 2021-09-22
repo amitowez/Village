@@ -1,7 +1,7 @@
 <template>
   <div class="character-block">
     <h2>Способности</h2>
-    <Perk v-for="perk in perks" :key="perk.id" :perk="perk" />
+    <Perk v-for="perk in newChekcPerk" :key="perk.id" :perk="perk" />
   </div>
 </template>
 <script>
@@ -15,8 +15,18 @@ export default {
       perks,
     };
   },
+  computed: {
+    newChekcPerk() {
+      return this.perks;
+    },
+  },
 };
 </script>
 <style scoped>
-
+.character-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
 </style>

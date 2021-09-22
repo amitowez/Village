@@ -1,6 +1,7 @@
 <template>
   <div>
     <router-view />
+    <p>В работе</p>
     <Player />
     <Opponent />
   </div>

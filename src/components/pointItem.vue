@@ -1,6 +1,6 @@
 <template>
   <div class="point-item">
-    <p>{{ item.dis }}</p>
+    <p style="width: 100px">{{ item.dis }}</p>
     <v-btn
       style="height: 30px; min-width: 30px; padding: 0px"
       class="btn-change"
@@ -21,11 +21,13 @@ export default {
       required: true,
     },
   },
+
   computed: {
     itemValue() {
       return this.item.value;
     },
   },
+
   methods: {
     valuePlus() {
       const newValue = this.item.value + 1;
@@ -40,7 +42,6 @@ export default {
           base,
           additionally,
         });
-        console.log(this.item, this.item.value);
       }
     },
     valueMinus() {
@@ -63,7 +64,7 @@ export default {
 </script>
 <style >
 .point-item {
-  margin: 30px;
+  margin: 15px;
   min-width: 80px;
   height: 30px;
   display: flex;
