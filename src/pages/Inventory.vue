@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <router-view />
-    <InventoryList :all-inventory="allInventory" />
+    <InventoryList :player-inventory="playerInventory" />
     <div class="block">
       <InventoryItemDescription />
       <v-btn style="margin-top: 50px" @click="readyInv">Готов к бою</v-btn>
@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import allInventory from '@/data/allInventory';
+import playerInventory from '@/data/playerInventory';
 import InventoryList from '@/components/inventory/InventoryList.vue';
 import InventoryItemDescription from '@/components/inventory/InventoryItemDescription.vue';
 
@@ -17,7 +17,7 @@ export default {
   components: { InventoryList, InventoryItemDescription },
   data() {
     return {
-      allInventory,
+      playerInventory,
     };
   },
   computed: {},

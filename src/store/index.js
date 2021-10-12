@@ -15,13 +15,16 @@ export default new Vuex.Store({
       statistics: {
         damage: 1,
         armor: 0,
+        maxHealPoint: 50,
         healPoint: 50,
+        maxStamina: 20,
         stamina: 20,
         evasion: 5,
         chanceHit: 0,
         criticalHitDamage: 2,
         criticalHitChance: 5,
         trainability: 0,
+        experience: 0,
       },
       specPoint: 6,
       specifications: {
@@ -86,10 +89,23 @@ export default new Vuex.Store({
         id: null,
       },
     },
+    battleNumber: 1,
+    roundNuber: 1,
+    playerRoundLog: '',
+    opponentRoundLog: '',
   },
   mutations: {
+    changeLog(state, { key, value }) {
+      Vue.set(state, key, value);
+    },
+    battleChangeParam(state, { key, value }) {
+      Vue.set(state.character.statistics, key, value);
+    },
+    battleChangeNumber(state, value) {
+      Vue.set(state, 'battleNumber', value);
+    },
     changeReady(state, key) {
-      Vue.set(state.readyToBatlle, key, true);
+      Vue.set(state.readyToBatlle, key, !state.readyToBatlle[key]);
     },
     changeSelectedItem(state, newSelected) {
       Vue.set(state, 'selectedItem', newSelected);
@@ -114,7 +130,9 @@ export default new Vuex.Store({
         const newStamina = state.character.statistics.stamina + base;
         const newCriticalHitDamage = state.character.statistics.criticalHitDamage + additionally;
         Vue.set(state.character.statistics, 'healPoint', newHealPoint);
+        Vue.set(state.character.statistics, 'maxHealPoint', newHealPoint);
         Vue.set(state.character.statistics, 'stamina', newStamina);
+        Vue.set(state.character.statistics, 'maxStamina', newStamina);
         Vue.set(state.character.statistics, 'criticalHitDamage', newCriticalHitDamage);
       }
       if (key === 'agility') {
