@@ -1,10 +1,20 @@
 export default [
   {
+    perkId: 0,
+    name: 'Отдых',
+    value: 5,
+    staminaPrice: 0,
+    successLog: 'отдыхает и востанавливает выносливость',
+  },
+  {
     perkId: 1,
     name: 'Удар',
     value: 0,
     chanceToHit: 60,
     staminaPrice: 1,
+    missingLog: 'не попадает',
+    successLog: 'попадает по противнику и наносит ',
+    critSuccessLog: 'попадает в уязвимое место и наносит ',
   },
   {
     perkId: 2,
@@ -12,6 +22,9 @@ export default [
     value: 10,
     chanceToHit: 55,
     staminaPrice: 10,
+    missingLog: 'не попадает',
+    successLog: 'вкладывает всю силу в удар и наносит ',
+    critSuccessLog: 'вкладывает всю силу в удар и попадает в уязвимое место нанося ',
   },
   {
     perkId: 3,
@@ -19,6 +32,9 @@ export default [
     value: -5,
     chanceToHit: 80,
     staminaPrice: 10,
+    missingLog: 'не попадает',
+    successLog: 'ударив прицельно наносит ',
+    critSuccessLog: 'прицельно ударив в уязвимое место наносит ',
   },
   {
     perkId: 4,
@@ -26,6 +42,9 @@ export default [
     value: 0,
     chanceToHit: 95,
     staminaPrice: 20,
+    missingLog: 'не попадает',
+    successLog: 'бьет в цель нанося ',
+    critSuccessLog: 'бьет в цель попадаю по уязвимому месту нанося ',
   },
   {
     perkId: 5,
@@ -33,6 +52,9 @@ export default [
     value: 10,
     chanceToHit: 100,
     staminaPrice: 35,
+    missingLog: 'не попадает',
+    successLog: 'идеально расчитав время наносит ',
+    critSuccessLog: 'мастерски расчитав удар попадает по уязвимому месту нанося ',
   },
   {
     perkId: 6,
@@ -40,12 +62,18 @@ export default [
     value: 20,
     chanceToHit: 75,
     staminaPrice: 35,
+    missingLog: 'не попадает',
+    successLog: 'сильно размахнувшись наносит ',
+    critSuccessLog: 'размахнувшись прктически убивает противника нанося ',
   },
   {
     perkId: 7,
     name: 'Смертельный удар',
-    value: 35,
+    value: 45,
     chanceToHit: 75,
     staminaPrice: 50,
+    missingLog: 'не попадает',
+    successLog: 'показывает свою силу нанося ',
+    critSuccessLog: 'бог смерти смотрит как жертва получает ',
   },
 ];

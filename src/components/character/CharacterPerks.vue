@@ -1,14 +1,15 @@
 <template>
   <div class="character-block">
     <h2>Способности</h2>
-    <Perk v-for="perk in newChekcPerk" :key="perk.id" :perk="perk" />
+    <Perk v-for="perk in newCheckPerk" :key="perk.id" :perk="perk" />
   </div>
 </template>
 <script>
 import Perk from './Perk.vue';
-import perks from '../data/playerPerk';
+import perks from '../../data/playerPerk';
 
 export default {
+  name: 'CharacterPerks',
   components: { Perk },
   data() {
     return {
@@ -16,7 +17,7 @@ export default {
     };
   },
   computed: {
-    newChekcPerk() {
+    newCheckPerk() {
       return this.perks;
     },
   },

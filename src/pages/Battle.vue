@@ -1,19 +1,26 @@
 <template>
   <div>
-    <router-view />
-    <p>В работе</p>
-    <Player />
-    <Opponent />
+    <div style="display: flex">
+      <router-view />
+      <PlayerDiscription />
+      <Log />
+      <Opponent />
+    </div>
+    <ButtonsAction />
   </div>
 </template>
 <script>
-import Player from '@/components/battlePlayer.vue';
-import Opponent from '@/components/battleOpponent.vue';
+import PlayerDiscription from '@/components/battle/PlayerDiscription.vue';
+import Opponent from '@/components/battle/OpponentDiscription.vue';
+import Log from '@/components/battle/BattleLog.vue';
+import ButtonsAction from '@/components/battle/ButtonsAction.vue';
 
 export default {
   components: {
-    Player,
     Opponent,
+    Log,
+    ButtonsAction,
+    PlayerDiscription,
   },
 };
 </script>
